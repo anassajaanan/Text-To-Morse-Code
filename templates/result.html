@@ -1,0 +1,14 @@
+{% extends 'index.html' %} {% block body %}
+<input
+  type="text"
+  name="string"
+  class="form-text"
+  placeholder="{{ string }}"
+  required
+  spellcheck="false"
+/>
+
+<textarea name="morse" cols="40" rows="5" class="form-text" spellcheck="false">
+{{ text }}</textarea
+>
+{% endblock %}
