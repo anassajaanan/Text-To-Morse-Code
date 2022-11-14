@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import smtplib
+import os
 
 app = Flask(__name__)
 
@@ -58,8 +59,8 @@ def string_to_morse_code(string):
     return converted_text
 
 
-MY_EMAIL = "anasajaanan.official@gmail.com"
-MY_PASSWORD = "toljsfwhkdsxdlhn"
+MY_EMAIL = os.environ['EMAIL']
+MY_PASSWORD = os.environ['PASSWORD']
 
 def send_mail(name, email, subject, message):
     connection = smtplib.SMTP("smtp.gmail.com", port=587)
